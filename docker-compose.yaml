@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  database:
+    
+    image: mysql
+    container_name: sisventas24
+
+    environment: 
+      MYSQL_DATABASE: "sisventas"
+      MYSQL_USER: "orlando"
+      MYSQL_PASSWORD: "nestor"
+      MYSQL_ROOT_PASSWORD: "nestor"
+    
+    ports:
+      - "3308:3306"
+
+    volumes:
+      - './mysql:/var/lib/mysql'
